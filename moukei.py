@@ -50,7 +50,7 @@ class Bot:
                      "напоминать тебе о выжных событиях!")
         except:
             pass
-     
+
         self.showMenu0(bot, update)
 
     def messageReceived(self, bot, update):
@@ -78,11 +78,11 @@ class Bot:
         else:
             try:
                 bot.send_message(
-                    chat_id=chat, 
+                    chat_id=chat,
                     text="Когда-то я смогу понять, что тебе нужно...")
             except:
                 pass
- 
+
     def showMenu0(self, bot, update):
         custom_keyboard = [['Правила', 'Штрафбат'], ['Расписание', 'Связь']]
         reply_markup = ReplyKeyboardMarkup(
@@ -94,7 +94,7 @@ class Bot:
                 reply_markup=reply_markup)
         except:
             pass
- 
+
     def showMenuRules(self, bot, update):
         custom_keyboard = [
             ['Правила ГИ'], ['Яма', 'Танк'],
@@ -231,7 +231,7 @@ class Bot:
             )
         except:
             pass
-  
+
     def showJail(self, bot, update):
         try:
             bot.send_message(
@@ -253,7 +253,7 @@ class Bot:
 
     def showShedule(self, bot, update):
         self.raidReminder.shedule(bot, update)
-    
+
     def showContact(self, bot, update):
         try:
             bot.send_message(
